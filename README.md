@@ -1,12 +1,12 @@
 # Splatoon 2 Meta EDA
 An analysis of weapon usage in Splatoon 2.
 
-. 1 - 3 page github Readme with above information included
-. Outline the process for the data pipeline
-. Multiple Data Visualizations
-. Outline Hypothesis Tests and results
-. Notebook containing EDA
-. Title that is NOT ‘Capstone 1’
+* 1 - 3 page github Readme with above information included
+* Outline the process for the data pipeline
+* Multiple Data Visualizations
+* Outline Hypothesis Tests and results
+* Notebook containing EDA
+* Title that is NOT ‘Capstone 1’
 
 ### Slide 1
 
