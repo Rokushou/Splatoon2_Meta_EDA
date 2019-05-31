@@ -2,7 +2,7 @@ def mannwhitney_dfcalc(df, disp=True, alternative='greater'):
     """
     Calculates the p-values of all combinations of columns in a dataframe.
     When set to one-sided, will only return p-values in in the direction that yields proper results.
-    ex. will not return a > b = 0.95, instead will calculate return b > a
+    ex. will not return a > b = 0.95, instead will calculate and return b > a
 
     Parameters:
 
