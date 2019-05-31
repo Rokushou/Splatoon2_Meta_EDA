@@ -35,6 +35,7 @@ I chose to use this data because the API is designed to be accessed from a mobil
 
 ## Initial Visualization
 I load the data from my pipeline and decide to put it all in a spaghetti plot as a simple visualization.
+
 ![](img/everything.png)
 
 #### Observations:
@@ -47,6 +48,7 @@ I decide to took at only the most used weapons according to multiple criteria.
 * Usage in final week: this weapon was popular towards the end when the meta became more stable.
 * Average usage: this weapon was popular throughout.
 * Peak usage: this weapon was extremely popular at one point.
+
 ![](img/final10.png)
 ![](img/avg10.png)
 ![](img/peak10.png)
@@ -66,9 +68,11 @@ I want to look at the weapons that showed up in all 3 top 10 lists and try to un
 - Blaster
 
 There are a lot of shooter (rifle) class weapons in this list, 4 out of 7. There are 1 each of roller (melee), dualies (dual pistols), and blaster (explosive). My personal favorite from this list are the Enperry Splat Dualies.
+
 ![](https://cdn.wikimg.net/en/splatoonwiki/images/6/69/S2_Weapon_Main_Enperry_Splat_Dualies.png)
 
 ### Spaghetti Plot:
+
 ![](img/top.png)
 
 #### Observations:
@@ -76,6 +80,7 @@ There are a lot of shooter (rifle) class weapons in this list, 4 out of 7. There
 * At a glance, the N-ZAP '85 appears to be the most consistently popular weapon. It is quite infamous in the game for being 'overused', expecially in high-level team play where this data is from. I would like to analyze if it was truly overused.
 
 ### Heatmap:
+
 ![](img/tophm.png)
 
 These are the strongest correletions accompanied by my best guess as to why based on game knowledge.
@@ -117,18 +122,22 @@ I would like to see the probability of encountering N-ZAPs in matches since at o
 ![](img/l1.png)
 
 I will first look at the N-ZAP when it was most popular, and likely when players clamoring over its overuse was most egregious.
+
 ![](img/nzapmax.png)
 
 #### Observations:
 * There was a 73% chance to see at least one N-ZAP in every game in this time period. This does line up with the community opinion of the N-ZAP being overused. While it is not quite 100%, the phrase "every game" can be expected to be used in hyperbole, and I would certinaly clasifiy almost 3 out of 4 as "most" games.
 
 However this peak usage was only for one week and the N-ZAPs usage was quite varied along the entire timeframe, so I would like to calculate the average probability as well.
+
 ![](img/nzapmaxavg.png)
 
 53% is definitely a lower percent than what the community led me to believe at the time. I would not say that slightly over half qualifies for the intention of "most games", semantically maybe. It is still a very high percent considering the game has over 80 weapons to chose from, but that is nowhere near the perception that it is in every game.
 
 For fun, I will calculate the probability of seeing any given weapon showing up in a game if every weapon was used equally.
+
 ![](img/l2.png)
+
 This results in a probability of 0.108
 
 At just under 11% there is not any point to test N-ZAP usage to hypothetical evenly distributed usage. It clearly shows up way more than than it should in terms of game balance.
@@ -139,13 +148,19 @@ Since the top weapons list was packed with shooters (rifles), I will compare the
 * Tentatek Splattershot
 * Forge Splattershot Pro
 * Enperry Splat Dualies*
+
 *I also include the Emperry Splat Dualies since it overlaps quite a bit with the N-ZAP in role and playstyle and is more similar to it than the Forge Splattershot Pro.
+
 ![](img/shooters.png)
+
 It looks like the usage of the N-ZAP is the highest and well above the mean.
+
 ![](https://cdn.wikimg.net/en/splatoonwiki/images/6/60/S2_Weapon_Main_Splattershot.png)
+
 The splattershot is interesting in that it started as the most used weapon then started dropping quickly while the N-ZAP climbed rapidly. The splattershot was the best weapon in the first game so many players must have stuck to it until the merits of the N-ZAP were discovered and people started switching over.
 
 ![](img/shootershm.png)
+
 As I expected, the N-ZAP's correlations are mostly neutral or negative except for the Forge Splattershot Pro (my thoughts on that above). Since these shooters all have a similar playstyle and fufill the same role.
 
 ### Formal Hypothesis Testing
@@ -161,6 +176,7 @@ As I expected, the N-ZAP's correlations are mostly neutral or negative except fo
 > The N-ZAP '85 is used more than the Splattershot.
 
 #### In Mathematical Terms
+
 ![](img/l3.png)
 
 #### Decide Rejection Threshold
@@ -206,6 +222,7 @@ p-value for:
 ![](https://cdn.wikimg.net/en/splatoonwiki/images/9/93/S2_Weapon_Special_Ink_Armor.png)
 
 Ink Armor is a very powerful ability in high-level play since it benefits the whole team and can only be fully utilized by good teamwork. As a result, teams usually want 1 Ink Armor weapon as having multiple does not scale well. Therefore the N-ZAP being overused should mean lower usage of other Ink Armor weapons.
+
 ![](img/ia.png)
 
 #### Observations:
@@ -214,6 +231,7 @@ Ink Armor is a very powerful ability in high-level play since it benefits the wh
 ![](https://cdn.wikimg.net/en/splatoonwiki/images/3/32/S2_Weapon_Main_Tri-Slosher.png)
 
 The tri-Slosher, a bucket used to splash paint. Truly a sophisticated and high-tech weapon.
+
 ![](img/iahm.png)
 
 #### Observations:
@@ -224,6 +242,7 @@ The tri-Slosher, a bucket used to splash paint. Truly a sophisticated and high-t
 * I do not know thow to intepret the negative correlation with the Gold Dynamo Roller as I am not personally familiar with that weapon. It is an extremely slow but powerful weapon leading to a very specialized and niche playstyle.
 
 Since the N-ZAP is clearly used more than any other Ink Armor weapon I will test it against all the others combined.
+
 ![](img/vsia.png)
 
 It looks like my initial assumption was correct. While it is fairly obvious that N-ZAP usage is higher, I will stell test if the N-ZAP '85 is more used than all other Ink Armor weapons combined. Because statistics.
@@ -246,9 +265,11 @@ The p value is so small it got rounded to 0. The actual p value is:
 - p = 2.182e-05
 
 This is the student's distribution in its normal view:
+
 ![](img/studentt.png)
 
 This is the the same plot with an extremely zoomed in y resolution:
+
 ![](img/tzoom.png)
 
 The tails are so thin at t = 4.95 that the area under it is invisible on a regular plot. Thus I can very confidently reject my null hypothesis. This means that the N-ZAP is clearly the Ink Armor weapon of choice for top players.
