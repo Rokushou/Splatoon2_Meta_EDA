@@ -1,5 +1,3 @@
-column# Pipeline
-
 ## Background
 I started with data gathered by reddit user u/timtlm and the owner of [Splat Meta](https://www.splatmeta.ink). He has openly released this data and it is free to use.
 
